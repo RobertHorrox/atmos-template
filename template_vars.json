@@ -1,0 +1,9 @@
+{
+  "app_name": "what-to-call.sh",
+  "docker_org": "examplecorp",
+  "docker_image_name": "infrastructure",
+  "banner": "Example Corp",
+  "default_aws_profile": "ns-env-name",
+  "aws_default_region": "us-east-2",
+  "aws_default_short_region": "use2"
+}

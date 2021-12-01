@@ -1,0 +1,23 @@
+components:
+  terraform:
+    # Base directory for terraform components within geodesic
+    base_path: "/components/terraform"
+    # Auto approve when running from source inside geodesic
+    apply_auto_approve: true
+    deploy_run_init: true
+    auto_generate_backend_file: false
+
+stacks:
+  # Base directory for stack configurations within geodesic
+  base_path: "/stacks"
+  included_paths:
+    - "**/*"
+  excluded_paths:
+    - "globals/**/*"
+    - "catalog/**/*"
+    - "**/*globals*"
+  name_pattern: "{tenant}-{environment}-{stage}"
+
+logs:
+  verbose: false
+  colors: true

@@ -1,0 +1,25 @@
+# This config file allows running atmos from the repository root directory
+# paths are relative to the repo root
+components:
+  terraform:
+    # Base directory for terraform components relative to repository root
+    base_path: "./components/terraform"
+    # Auto apply disabled when running from local source
+    apply_auto_approve: false
+    deploy_run_init: true
+    auto_generate_backend_file: false
+
+stacks:
+  # Base directory for stack configurations relative to repository root
+  base_path: "./stacks"
+  included_paths:
+    - "**/*"
+  excluded_paths:
+    - "globals/**/*"
+    - "catalog/**/*"
+    - "**/*globals*"
+  name_pattern: "{tenant}-{environment}-{stage}"
+
+logs:
+  verbose: false
+  colors: true
